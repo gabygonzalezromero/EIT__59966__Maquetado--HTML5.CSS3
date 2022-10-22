@@ -2,15 +2,27 @@
 
 :root {
     font-size : 18px ;
+
     /* Paleta de colores HEX */
-    --c_blue800: #e63946ff;
-    --c_white300 : #f1faeeff;
-    --c_yellow200 : #a8dadcff;
-    --c_yellow500: #457b9dff;
-    --c_yellow900: #1d3557ff;
-    --red_darken-1 : #6a1b9a ;
-    
-    --t_transform : uppercase ;
+    /*https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c*/
+    --c_red600 : #ef476fff;
+    --c_cyan600 : #ffd166ff;
+    --c_green600 : #06d6a0ff;
+    --c_green900: #073b4cff;
+    --c_yellow600 : #118ab2ff;
+    --c_white : #fff ;
+
+    /*Paleta HSL*/
+    /*https://coolors.co/palette/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-90e0ef-ade8f4-caf0f8*/
+    --c-blue900 : hsla(239, 94%, 19%, 1);
+    --c_blue800 : hsla(214, 97%, 27%, 1);
+    --c_blue700 : hsla(201, 100%, 36%, 1);
+    --c_blue600 : hsla(195, 100%, 39%, 1);
+    --c_blue500 : hsla(190, 100%, 42%, 1);
+    --c_blue400 : hsla(189, 74%, 59%, 1);
+    --c_blue300 : hsla(189, 75%, 75%, 1);
+    --c_blue200 : hsla(190, 76%, 82%, 1);
+    --c_blue100 : hsla(190, 77%, 88%, 1);
 
 }
 
@@ -22,17 +34,17 @@
     box-sizing: border-box ;
 }
 
+h1 { font-size: 2rem ; /* fuente base 14px * 20 = ...*/ }
+h2 { font-size: 1.75rem ; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+p { font-size: 1rem; }
+
 .container {
-    margin: 10px ;
+    padding: 0 10px ;
 }
 
-h1 {
-    font-size: 2rem ; /* fuente base 14px * 20 = ...*/
-}
 
-h2 {
-    font-size: 1.75rem ;
-}
 
 /* BEM = Bloque - Elemento - Modificador */
 /* 
@@ -51,28 +63,25 @@ h2 {
 
     width: 100vw;
     height: 20vh;
+    
+    background-color : var( --c_blue800 ) ;
 }
 
 .header .article {
-    padding: 1rem ;
 }
 
 /*.header .article__header {}*/
 
 .header .article__header--title {
     font-weight: 600 ;
-    text-transform : var( --t_transform ) ;
 
-    color : var( --c_blue800 ) ;
+    color : var( --c_white ) ;
 }
 
 .header .article__header--subtitle {
-    padding: .5rem 0 ;
-
     text-transform : lowercase ;
-    color : var( --c_yellow900 ) ;
+    color : var( --c_white ) ;
 
-    s
 }
 
 
@@ -81,6 +90,8 @@ h2 {
 
 .main {
     height: 70vh;
+
+    padding: 1rem 0;
 }
 
 .main .section {}
@@ -100,7 +111,7 @@ h2 {
     gap : 2rem ;
 }
 
-.main .section .article .header--menu--item {
+.main .section .article__header--menu--item {
     list-style-type: none ;
 }
 
