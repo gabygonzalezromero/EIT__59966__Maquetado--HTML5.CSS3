@@ -1,0 +1,123 @@
+
+
+:root {
+    font-size : 18px ;
+    /* Paleta de colores HEX */
+    --c_blue800: #e63946ff;
+    --c_white300 : #f1faeeff;
+    --c_yellow200 : #a8dadcff;
+    --c_yellow500: #457b9dff;
+    --c_yellow900: #1d3557ff;
+    --red_darken-1 : #6a1b9a ;
+    
+    --t_transform : uppercase ;
+
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight : 400 ;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+
+.container {
+    margin: 10px ;
+}
+
+h1 {
+    font-size: 2rem ; /* fuente base 14px * 20 = ...*/
+}
+
+h2 {
+    font-size: 1.75rem ;
+}
+
+/* BEM = Bloque - Elemento - Modificador */
+/* 
+* body .header .section .article .header .h1 span {}
+* .article__header--h1--span { color : red } ;
+*
+* */
+
+
+/*Comienzo .Header */
+.header {
+    display: flex ; /* flex , inline , block , grid , inline-block */
+    flex-direction : row ; /* row , column */
+    align-items : center ; /* star , end , center , top , bottom */
+    justify-content: center;
+
+    width: 100vw;
+    height: 20vh;
+}
+
+.header .article {
+    padding: 1rem ;
+}
+
+/*.header .article__header {}*/
+
+.header .article__header--title {
+    font-weight: 600 ;
+    text-transform : var( --t_transform ) ;
+
+    color : var( --c_blue800 ) ;
+}
+
+.header .article__header--subtitle {
+    padding: .5rem 0 ;
+
+    text-transform : lowercase ;
+    color : var( --c_yellow900 ) ;
+
+    s
+}
+
+
+ /*Comienzo .Aside*/
+/* .aside {} */
+
+.main {
+    height: 70vh;
+}
+
+.main .section {}
+
+.main .section .article {}
+
+.main .section .article__header--title {}
+
+.main .section .article__header--subtitle {}
+
+.main .section .article__header--menu {
+    display: flex;
+    flex-direction : row ;
+    justify-content : center ;
+    align-items: center;
+    
+    gap : 2rem ;
+}
+
+.main .section .article .header--menu--item {
+    list-style-type: none ;
+}
+
+
+
+
+
+ /*Comienzo Footer*/
+.footer {
+    height: 10vh;
+}
+"
+.footer .section {}
+
+.footer .section .article {}
+
+.footer .section .article__main {}
+
+.footer .section .article__main--paragraph {}
+
