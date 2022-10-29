@@ -1,7 +1,8 @@
-
+html {
+    font-size : 18px ;
+}
 
 :root {
-    font-size : 18px ;
 
     /* Paleta de colores HEX */
     /*https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c*/
@@ -51,6 +52,21 @@ p { font-size: 1rem; }
 * body .header .section .article .header .h1 span {}
 * .article__header--h1--span { color : red } ;
 *
+* Etiquetas { propiedad : valor }
+* h1 {
+* color : red ;
+}
+*body {
+    width : 100px ;
+}
+* 
+* padding : 10px ,
+* 
+* padding-top : 10px
+* padding-right : 10px 
+* padding-left: 10px ; 
+* padding-bottom: 10px ;
+*
 * */
 
 
@@ -64,8 +80,12 @@ p { font-size: 1rem; }
     width: 100vw;
     height: 20vh;
     
-    background-color : var( --c_blue800 ) ;
 }
+
+/* background-repeat : repeat no-repeat repeat-y repeat-x */
+/* background-size : 1rem 100px contain auto */
+
+/* background-position : center left right */
 
 .header .article {
 }
@@ -92,6 +112,7 @@ p { font-size: 1rem; }
     height: 70vh;
 
     padding: 1rem 0;
+    background : url( './images/bg0.jpg' ) ;
 }
 
 .main .section {}
@@ -132,3 +153,24 @@ p { font-size: 1rem; }
 
 .footer .section .article__main--paragraph {}
 
+#div {
+    width: 100px;
+    height: 100px;
+    background-color : blue ;
+
+    padding: 15px 1rem .5% 0 ;
+   padding : 0 10px ;
+    padding-right: 10px ;
+    padding-left: 10px ;
+   
+    /* padding-top: 8px ;*/
+    /*padding-right : 3px;*/
+    /*padding-bottom: 7px ;*/
+   /* padding-left: 5px;*/
+    margin: 2rem 15px;
+    /*margin-top: 10px ;*/
+    /*margin-right: 10px ;*/
+    /*margin-bottom: 10px ;*/
+    /*margin-left:10px;*/
+
+}

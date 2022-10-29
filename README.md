@@ -28,8 +28,19 @@ Cursada : Sabados de 10 a 13 hs.
 ### Temas :
     -  #### Git : Clonar repositorio, actualizar contenido de un repo remoto.
     - Compatibilidad de navegadores.
+        - Siglas `-moz` => Mozilla Firefox.
+        - Siglas `-webkit` => Safary.
+        - Siglas `... .Microsoft. ...` Internet Explorer.
     - Background.
+        - `background`
+        - `background-image`
+        - `background-size`
+        - `background-repeat`
+        - `background-color`
+        Agrupando propiedades : `background : url('...') no-repeat cover`
+        Es igual a `background-image` + `background-repeat` + `background-size`
     - Imagenes y sus propiedades.
+        
     - Bordes.
     - Sombras.
     - Normalizador y Reseteador de CSS.
