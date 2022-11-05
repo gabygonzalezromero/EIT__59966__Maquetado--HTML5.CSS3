@@ -48,3 +48,16 @@ Cursada : Sabados de 10 a 13 hs.
     | --- | --- |
     | Reset | [GitHub RAW](https://raw.githubusercontent.com/lodela/reset-CSS/main/reset.css) |
     | Normalizador | [GitHub](https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css) |
+
+---
+## Clase del Sabado 5 de Noviembre de 2022
+
+### Temas a tratar :
+    - Repaso de unidades relativas y absolutas.
+    - Repaso de HTML5 y accesibilidad.
+    - Display : `flex` y `grid`
+    - Impostores ( div vs botones vs links ).
+    - herramientas de desarrollo de Chrome y Firefox.
+    - Que si y que no en el layout.
+
+---
