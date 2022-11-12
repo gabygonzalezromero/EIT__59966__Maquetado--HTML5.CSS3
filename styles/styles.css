@@ -6,6 +6,7 @@ html {
 
     /* Paleta de colores HEX */
     /*https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c*/
+    /*/https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429 */
     --c_red600 : #ef476fff;
     --c_cyan600 : #ffd166ff;
     --c_green600 : #06d6a0ff;
@@ -13,6 +14,8 @@ html {
     --c_yellow600 : #118ab2ff;
     --c_white : #fff ;
     --c_black : #000 ;
+
+    --c_grey100 : #EDF2F4 ;
 
     /*Paleta HSL*/
     /*https://coolors.co/palette/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-90e0ef-ade8f4-caf0f8*/
@@ -51,17 +54,23 @@ p { font-size: 1rem; }
 
 .body {
     display : grid ;
-    grid-template-columns: 12fr ;/* ( 100vw / 12 ) */
+    grid-template-columns: 50% 50%;
     grid-template-rows: 10vh 80vh 10vh;
     grid-template-areas:
-        "Header Header Header Header" /*( 100% x 10vh )*/
-        "Aside Main Main Main"/* ( 25% Aside x auto + Main *3 10vh )*/
-        "Footer Footer Footer Footer" /*( 25% Aside + Footer *3 10vh )*/
+        "Header Header"
+        "Main Main"
+        "Footer Footer"
 }
 
 .header {
     grid-area : Header ;
 
+    background-color: var( --c_blue500 );
+
+}
+
+.header .section {
+    height: 100% ;
 }
 
 .header section .navbar {
@@ -128,9 +137,6 @@ p { font-size: 1rem; }
     background-color: var( --c_blue800 ) ;
 }
 
-
-/*.header .article__header {}*/
-
 .header .article__header--title {
     font-weight: 600 ;
 
@@ -146,56 +152,111 @@ p { font-size: 1rem; }
 
  /*Comienzo .Aside*/
 .aside {
-    grid-area : Aside ;
-    background-color: yellow ;
 }
+
+/* Fin Aside */
+
+/* Comienzo Main */
 
 .main {
     grid-area : Main ;
 
+    background-color: var( --c_grey100 );
+
 }
 
 .main .section {
-    display: grid;
-    grid-template-columns : 50% 50% ;
-    grid-template-rows : 50% 50% ;
-    grid-gap : 5px ; /* grid-gap-button / grid-gap-left / grid-gap columns / rows*/
-    border : 2px solid green ;
-    margin: 200px;
-}
-
-
-.main .section .article__header--title {}
-
-.main .section .article__header--subtitle {}
-
-.main .section .article__header--menu {
-    display: flex;
-    flex-direction : row ;
-    justify-content : center ;
+    display : flex ;
+    flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
-    
+
+    width: 100% ;
+}
+
+.main .section .article__header {
+    margin: 2rem ;
+
+    text-align: center;
+}
+
+.main .section .article__header--title {
+    font-weight: 600;
+}
+
+.main .section .article__header--subtitle {
+    font-weight: 400;
+}
+
+
+.main .section .article__main--menu {
+    display: flex;
+    flex-flow: column nowrap ;
+    align-items: center;
     gap : 2rem ;
+
+    margin-top: 3rem;
 }
 
-.main .section .article__header--menu--item {
+.main .section .article__main--menu--item {
+    display : flex ;
+    place-content: center ;
+
+    width: 40vw;
+    height: 3rem ;
+
+    border-radius: 2rem ;
+
     list-style-type: none ;
+    box-shadow: var(--c_blue400) ;
+
+    background-color: var( --c_blue500 );
+    text-decoration: none;
 }
 
+.main .section .article__main--menu--item a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
+.main .section .article__main--menu--item span {
+    color : var( --c_white ) ;
+}
 
+.main .section .article__main--menu--item:hover {
+    background-color: var( --c_blue700 ) ;
+    box-shadow: .25rem .25rem var( --c_blue800 );
+
+    transition: .3s ease-out;
+    border-bottom: 1px solid var( --c_blue800 );
+    border-right: 1px solid var( --c_blue800 );
+
+}
+
+.main .section .article__main--menu--item figure {
+    width: 2rem;
+    height: 2rem;
+}
+
+.main .section .article__main--menu--item figure img {
+    background-color: var( --c_white) ;
+    border-radius: 50% ;
+}
 
 
  /*Comienzo Footer*/
 .footer {
     grid-area : Footer ;
 
-    background-color : red ;
+    background-color : var( --c_blue700 ) ;
 }
 
 .footer .section {
     display: flex ;
-    flex-direction : row ;
+    flex-flow : row nowrap ;
     justify-content : center ;
     align-items : center ;
 }
@@ -205,18 +266,3 @@ p { font-size: 1rem; }
 .footer .section .article__main {}
 
 .footer .section .article__main--paragraph {}
-
-BEM - Bloque__Elemento--Modificador
-
-Bootstrap : primary secundary alert warning...
-
-[] {
-    
-}
-h1 {
-...
-}
-
-
-
-body main header aside footer a p div nav ...

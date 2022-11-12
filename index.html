@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <title>Hola mundo!</title>
 
         <link rel="stylesheet" href="./styles/styles.css" />
@@ -18,7 +18,11 @@
         <header class="header" >
             <section> 
                 <nav class="navbar" >
-                    <a href="http://www.google.com/" target="_blank" >Inicio</a>
+                    <a href="mailto:...?subject=...&body=Hola!" target="_blank" >
+                        <figure>
+                            <img src="" alt="Contacto" /><img src="./images/i_envelope.svg" alt="ES : Contacto | EN : Contact me" />
+                        </figure>
+                    </a>
                     <button class="button" >
                         <span></span>
                         <span></span>
@@ -27,12 +31,6 @@
                 </nav>
                 <h2 class='classes' ></h2>
                 
-                <article class="article" >
-                    <header class="article__header" >
-                        <h4 class="article__header--subtitle" >Front End Dev</h4>
-                        <h1 class="article__header--title" >Gaby Gonzalez Romero</h1>
-                    </header>
-                </article>
             </section>
         </header >
         <!--Fin Header-->
@@ -43,37 +41,50 @@
         <!--Comienzo Main-->
         <main class="main" >
             <section class="section">
-                <article class="article">
-                    <header class="article__header">
-                        <ul class="article__header--menu" >
-                            <li class="article__header--menu--item" >
-                                <a href="#"> Sobre mi </a>
-                            </li>
-                            <li class="article__header--menu--item" >
-                                <a href="#">LinkedIn</a>
-                            </li>
-                            <li class="article__header--menu--item" >
-                                <a href="#">GitHub</a>
-                            </li>
-                        </ul>
+                <article class="article" >
+                    <header class="article__header" >
+                        <h4 class="article__header--subtitle" >Front End Dev</h4>
+                        <h1 class="article__header--title" >[Tu nombre]</h1>
                     </header>
+
+                    <main class="article__main">
+                        <ul class="article__main--menu" >
+                           <li class="article__main--menu--item" >
+                               <a href="#">
+                                   <figure>
+                                       <img src="./images/i_linkedin1.svg" alt="ES : LinkedIn Logo | EN : LinkedIn Logo" />
+                                   </figure>
+                                <span>LinkedIn</span>
+                               </a>
+                            </li>
+                            <li class="article__main--menu--item" >
+                                <a href="">
+                                <figure>
+                                    <img src="./images/i_github.svg" alt="ES : GitHub Logo | EN : GitHub Logo" />
+                                </figure>
+                                <span>GitHub</span>
+                                </a>
+                            </li>
+                            <li class="article__main--menu--item" >
+                                <a href="">
+                                <figure>
+                                    <img src="./images/i_twitter.svg" alt="ES : Twitter Logo | EN : Twitter  Logo" />
+                                </figure>
+                                <span>Twitter</span>
+                                </a>
+                            </li>
+                            <li class="article__main--menu--item" >
+                                <a href="">
+                                <figure>
+                                    <img src="./images/i_instagram.svg" alt="ES : Instagram Logo | EN : Instagram  Logo" />
+                                </figure>
+                                <span>Instagram</span>
+                                </a>
+                            </li>
+                         </ul>
+                    </main>
                 </article>
-                <article class="article">
-                    <p class="contenido">
-                        Parrafo 1
-                    </p>
-                </article>
-                <article class="article">
-                    <p class="contenido">
-                        Parrafo 2
-                    </p>
-                </article>
-                <article class="article">
-                    <p class="contenido">
-                        Parrafo 3
-                    </p>
-                </article>
-            </section>
+           </section>
         </main>
         <!--Fin main-->
 
@@ -83,7 +94,12 @@
                 <article class="article" >
                     <main class="article__main" >
                         <p class="article__main--paragraph" >
-                            Autor : yo!
+                            Autor [...]
+                        </p>
+                        <p>
+                            <a href="mailto:...?subjet=...." >
+                                Di 'Hola!' 👋
+                            </a>
                         </p>
                     </main>
                 </article>
