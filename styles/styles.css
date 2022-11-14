@@ -55,7 +55,7 @@ p { font-size: 1rem; }
 .body {
     display : grid ;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 10vh 75vh 15vh;
     grid-template-areas:
         "Header Header"
         "Main Main"
@@ -64,9 +64,10 @@ p { font-size: 1rem; }
 
 .header {
     grid-area : Header ;
-
-    background-color: var( --c_blue500 );
-
+    background: hsla(191, 75%, 60%, 1);
+    background: linear-gradient(180deg, var( --c_blue800 ) 0%, var( --c_blue300 ) 100%);
+    background: -moz-linear-gradient(180deg, var( --c_blue800 ) 0%, var( --c_blue300) 100%);
+    background: -webkit-linear-gradient(180deg,var( --c_blue800 ) 0%, var( --c_blue300 ) 100%);
 }
 
 .header .section {
@@ -75,21 +76,51 @@ p { font-size: 1rem; }
 
 .header section .navbar {
     display: flex;
-    flex-flow : row nowrap ; /* flex-direction + flex-wrap */
+    flex-flow : row nowrap ;
     justify-content : space-between ;
     align-items : center ;
 
-    height: 50px ;
-
-    padding-left : 1rem ;
-    padding-right : 1rem ;
+    height : 100% ;
 }
 
-.header .navbar {
+.header .section .navbar .logo {
+    display: flex ;
+    place-items: center ;
+    gap : 1rem ;
 
+    padding : .5rem 1.5rem ;
+
+    background-color: var( --c_white ) ;
+    border-radius: 2rem ;
+
+    color : var( --c_black ) ;
+    text-decoration: none;
 }
 
-.header .navbar .button {
+.header .section .navbar .logo span:hover {
+    transition: 2s ease-in;
+    rotate: 45deg ;
+}
+
+.header .section .navbar .logo figure {
+    display: inline-flex ;
+    place-items: center;
+
+    height: 100%;
+}
+
+.header section .navbar {
+    display: flex;
+    flex-flow : row nowrap ;
+    justify-content : space-between ;
+    align-items : center ;
+
+    height: 100% ;
+
+    padding : 0 2rem ;
+}
+
+.header .section .navbar .button {
     width: 2rem;
     height: 2rem;
 
@@ -103,9 +134,8 @@ p { font-size: 1rem; }
     border : 0 ;
 }
 
-.header .navbar .button > span {
-    border : 2px solid var( --c_black ) ;
-     /*[> border-height : 2px + border-style : solid/dotted/double /... + border-color: red ; <]*/
+.header .section .navbar .button > span {
+    border : 2px solid var( --c_white ) ;
     border-radius : 5px ;
     width : 100% ;
     
@@ -113,40 +143,16 @@ p { font-size: 1rem; }
     transform-origin : left ;
 }
 
-.header .navbar .button:hover span:first-child {
+.header .section .navbar .button:hover span:first-child {
     transform : rotate( 45deg ) ;
 }
 
-.header .navbar .button:hover span:nth-child(2){
+.header .section .navbar .button:hover span:nth-child(2){
     opacity : 0 ;
 }
 
-.header .navbar .button:hover span:last-child {
+.header .section .navbar .button:hover span:last-child {
     transform : rotate( -45deg ) ;
-}
-
-
-
-/*Comienzo .Header */
-.header .article {
-    display: flex ; /* flex , inline , block , grid , inline-block */
-    flex-direction : row ; /* row , column */
-    align-items : center ; /* star , end , center , top , bottom */
-    justify-content: center;
- 
-    background-color: var( --c_blue800 ) ;
-}
-
-.header .article__header--title {
-    font-weight: 600 ;
-
-    color : var( --c_white ) ;
-}
-
-.header .article__header--subtitle {
-    text-transform : lowercase ;
-    color : var( --c_white ) ;
-
 }
 
 
@@ -203,7 +209,7 @@ p { font-size: 1rem; }
     place-content: center ;
 
     width: 40vw;
-    height: 3rem ;
+    padding: .5rem ;
 
     border-radius: 2rem ;
 
@@ -211,7 +217,6 @@ p { font-size: 1rem; }
     box-shadow: var(--c_blue400) ;
 
     background-color: var( --c_blue500 );
-    text-decoration: none;
 }
 
 .main .section .article__main--menu--item a {
@@ -220,6 +225,7 @@ p { font-size: 1rem; }
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    text-decoration: none;
 }
 
 .main .section .article__main--menu--item span {
@@ -242,7 +248,7 @@ p { font-size: 1rem; }
 }
 
 .main .section .article__main--menu--item figure img {
-    background-color: var( --c_white) ;
+    background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 55%, transparent 100%); ;
     border-radius: 50% ;
 }
 
@@ -250,8 +256,7 @@ p { font-size: 1rem; }
  /*Comienzo Footer*/
 .footer {
     grid-area : Footer ;
-
-    background-color : var( --c_blue700 ) ;
+    background: var( --c_blue500 );
 }
 
 .footer .section {
@@ -259,10 +264,8 @@ p { font-size: 1rem; }
     flex-flow : row nowrap ;
     justify-content : center ;
     align-items : center ;
+
+    height: 100%;
+
+    text-align: center;
 }
-
-.footer .section .article {}
-
-.footer .section .article__main {}
-
-.footer .section .article__main--paragraph {}
